@@ -64,7 +64,7 @@ export default async function Home() {
                 <div className="hidden md:block">
                     <a 
                       href={`mailto:${data.email}`}
-                      className="selectable hover:underline"
+                      className="hover:underline"
                     >
                       {data.email}
                     </a>
@@ -88,7 +88,7 @@ export default async function Home() {
                     <div className="md:hidden text-right">
                         <a 
                           href={`mailto:${data.email}`}
-                          className="selectable hover:underline"
+                          className="hover:underline"
                         >
                           {data.email}
                         </a>
