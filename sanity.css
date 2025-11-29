@@ -1,0 +1,112 @@
+/* Force dark mode by default */
+html,
+html[data-scheme],
+html[data-scheme="light"] {
+  color-scheme: dark !important;
+}
+
+html[data-scheme="light"],
+html:not([data-scheme]) {
+  --sanity-color-base-focus-ring: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Hide only the Sanity logo SVG/image elements */
+[data-testid="studio-logo"] svg,
+[data-testid="studio-logo"] img,
+[data-testid="studioLogo"] svg,
+[data-testid="studioLogo"] img,
+div[data-ui="LogoContainer"] > svg,
+div[data-ui="LogoContainer"] > img,
+a[href="/"] svg,
+a[href="/"] img,
+nav > a:first-child svg,
+nav > a:first-child img,
+div[data-ui="Navbar"] > a:first-child svg,
+div[data-ui="Navbar"] > a:first-child img {
+  display: none !important;
+}
+
+/* Collapse logo container boxes (zero width/height) without affecting text layout */
+div[data-ui="LogoContainer"] > div:has(> svg),
+div[data-ui="LogoContainer"] > div:has(> img),
+a[href="/"] > div:has(> svg):not(:has(span)):not(:has(text)),
+a[href="/"] > div:has(> img):not(:has(span)):not(:has(text)),
+nav > a:first-child > div:has(> svg):not(:has(span)):not(:has(text)),
+nav > a:first-child > div:has(> img):not(:has(span)):not(:has(text)),
+div[data-ui="Navbar"] > a:first-child > div:has(> svg):not(:has(span)):not(:has(text)),
+div[data-ui="Navbar"] > a:first-child > div:has(> img):not(:has(span)):not(:has(text)) {
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hide popover divs (but not main dialogs) */
+div[data-ui="Popover"]:not([role="dialog"]),
+div[data-ui="PopoverContainer"],
+div[class*="popover"]:not([role="dialog"]),
+div[class*="Popover"]:not([role="dialog"]),
+[data-popover]:not([role="dialog"]),
+[data-popover-root]:not([role="dialog"]),
+div[data-ui="Popover"][role="presentation"] {
+  display: none !important;
+}
+
+/* Hide text popups/tooltips at bottom left (help menu) */
+[data-testid="help-dialog"],
+[data-testid="help-menu"],
+[data-testid="help-button"],
+[data-testid="help-tooltip"],
+div[data-ui="HelpMenu"],
+button[aria-label*="Help"],
+button[aria-label*="help"],
+button[title*="Help"],
+button[title*="help"] {
+  display: none !important;
+}
+
+/* Hide structure/vision menu toggle - visionTool removed, but hide any tool switcher */
+[data-testid="tool-menu"],
+[data-testid="tool-switcher"],
+nav[aria-label="Tools"],
+div[data-ui="ToolMenu"],
+button[aria-label*="Vision"],
+button[aria-label*="Structure"] {
+  display: none !important;
+}
+
+/* Hide any help/notification popups at bottom left */
+[data-testid="help-popup"],
+[data-testid="notification"],
+div[role="tooltip"],
+div[data-ui="ToastContainer"],
+div[data-ui="NotificationContainer"],
+div[data-ui="HelpDialog"] {
+  display: none !important;
+}
+
+/* Hide bottom-left fixed position help elements */
+div[style*="position: fixed"][style*="bottom"][style*="left"],
+div[style*="position:fixed"][style*="bottom"][style*="left"] {
+  display: none !important;
+}
+
+/* Ensure project name/title text is visible */
+a[href="/"],
+a[href="/"] > span,
+a[href="/"] > div:not(:has(> svg)):not(:has(> img)),
+div[data-ui="LogoContainer"] > span,
+div[data-ui="LogoContainer"] > div:not(:has(> svg)):not(:has(> img)) {
+  display: flex !important;
+  align-items: center !important;
+}
+
+a[href="/"] > span,
+a[href="/"] > div:not(:has(> svg)):not(:has(> img)) > *,
+div[data-ui="LogoContainer"] > span,
+div[data-ui="LogoContainer"] > div:not(:has(> svg)):not(:has(> img)) {
+  display: block !important;
+}
+

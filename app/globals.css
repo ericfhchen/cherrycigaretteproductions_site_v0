@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-red: #D60000;
+  --color-red-r: 214;
+  --color-red-g: 0;
+  --color-red-b: 0;
+  --color-black: #000000;
+  --color-ash: #888888;
+  --transition-duration: 0.3s;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-custom), serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+/* Prevent text selection during interactions */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Responsive grid template rows - flip below md breakpoint */
+.responsive-grid-rows {
+  grid-template-rows: 150fr 350fr;
+}
+
+@media (min-width: 768px) {
+  .responsive-grid-rows {
+    grid-template-rows: 350fr 150fr;
+  }
+}
+
+/* Hide cursor when crosshair is active */
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}
+
+::selection {
+  background-color: var(--color-ash);
+  /* color: var(--color-black); */
+}
