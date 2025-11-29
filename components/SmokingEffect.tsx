@@ -371,7 +371,7 @@ export default function SmokingEffect({ duration, burnAccelerationFactor = 3, ch
       burningLineStyleRef
     }}>
       <div
-        className="relative w-full min-h-screen transition-colors"
+        className="relative w-full min-h-[100svh] max-h-[100svh]  transition-colors"
         style={{
           backgroundColor: finalBgColor,
           color: finalTextColor,

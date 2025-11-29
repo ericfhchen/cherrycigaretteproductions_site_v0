@@ -11,7 +11,7 @@ export default async function Home() {
         className="responsive-grid-rows"
         style={{
           width: '100vw',
-          height: '100vh',
+          height: '100svh',
           display: 'grid',
           gridTemplateColumns: '150fr 350fr',
           gap: '1rem',
