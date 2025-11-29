@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <SmokingEffect duration={data.smokingDuration || 10} burnAccelerationFactor={data.burnAccelerationFactor}>
       <div
-        className="responsive-grid-rows"
+        className="responsive-grid-rows no-select"
         style={{
           width: '100vw',
           height: '100svh',
@@ -62,7 +62,12 @@ export default async function Home() {
                 <div className="block md:hidden"></div>
                 {data.email && (
                 <div className="hidden md:block">
-                    {data.email}
+                    <a 
+                      href={`mailto:${data.email}`}
+                      className="selectable hover:underline"
+                    >
+                      {data.email}
+                    </a>
                 </div>
                 )}
             </div>   
@@ -81,7 +86,12 @@ export default async function Home() {
             <div>
             {data.email && (
                     <div className="md:hidden text-right">
-                        {data.email}
+                        <a 
+                          href={`mailto:${data.email}`}
+                          className="selectable hover:underline"
+                        >
+                          {data.email}
+                        </a>
                     </div>
                     )}
                 <div className="mt-auto pt-8">

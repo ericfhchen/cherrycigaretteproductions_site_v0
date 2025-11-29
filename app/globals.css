@@ -45,6 +45,14 @@ body {
   user-select: none;
 }
 
+/* Allow text selection for specific elements (like email links) */
+.selectable {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 /* Responsive grid template rows - flip below md breakpoint */
 .responsive-grid-rows {
   grid-template-rows: 150fr 350fr;
