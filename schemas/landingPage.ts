@@ -40,13 +40,6 @@ export const landingPageSchema = defineType({
       description: 'How much faster the line burns while holding mouse click (1-10)',
       initialValue: 3,
       validation: (Rule) => Rule.min(1).max(10).integer(),
-      options: {
-        range: {
-          min: 1,
-          max: 10,
-          step: 1,
-        },
-      },
     }),
   ],
   preview: {
