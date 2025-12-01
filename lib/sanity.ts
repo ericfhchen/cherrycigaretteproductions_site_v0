@@ -50,7 +50,6 @@ export async function getLandingPageData(): Promise<LandingPageData> {
     console.error('Error fetching landing page data:', error)
     return {
       siteTitle: 'Cherry Cigarette Productions',
-      bio: 'Cherry Cigarette Productions is a full service production company specializing in lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque nulla, rhoncus id semper vitae, rutrum ac lectus. Pellentesque finibus, neque vitae vulputate viverra, purus leo laoreet.',
       contact: 'CONTACT',
       email: 'info@cherrycigarette.productions',
       smokingDuration: 10,

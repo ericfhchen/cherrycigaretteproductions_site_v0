@@ -46,9 +46,9 @@ export default async function Home() {
          <div className=""></div>
 
          {/* Bio - Desktop */}
-         {data.bio && (
+         {data.bio?.trim() && (
               <div className="leading-tight hidden md:block">
-                {data.bio}
+                {data.bio.trim()}
               </div>
             )}
 
@@ -77,9 +77,9 @@ export default async function Home() {
         <div className="flex flex-col items-end justify-between md:items-end md:justify-end h-full" style={{ minWidth: 0 }}>
         {/* Bio - Mobile */}
         <div className="md:hidden"></div>
-            {data.bio && (
+            {data.bio?.trim() && (
                 <div className="leading-tight block md:hidden">
-                    {data.bio}
+                    {data.bio.trim()}
                 </div>
                 )}
             {/* Footer */}
