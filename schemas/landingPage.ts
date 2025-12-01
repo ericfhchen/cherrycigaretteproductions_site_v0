@@ -13,15 +13,6 @@ export const landingPageSchema = defineType({
       initialValue: 'Cherry Cigarette Productions',
     }),
     defineField({
-      name: 'favicon',
-      title: 'Favicon (.ico)',
-      type: 'image',
-      description: 'Main favicon file (.ico format)',
-      options: {
-        accept: '.ico',
-      },
-    }),
-    defineField({
       name: 'favicon16',
       title: 'Favicon 16x16',
       type: 'image',

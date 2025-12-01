@@ -24,14 +24,6 @@ export async function generateMetadata(): Promise<Metadata> {
   const icons: Metadata['icons'] = {}
   const iconArray: Array<{ url: string; sizes?: string; type?: string }> = []
   
-  // Add .ico favicon if available
-  if (data.favicon) {
-    const faviconUrl = urlFor(data.favicon)
-    if (faviconUrl) {
-      iconArray.push({ url: faviconUrl, type: 'image/x-icon' })
-    }
-  }
-  
   // Add PNG favicons with sizes
   if (data.favicon16) {
     const url = urlFor(data.favicon16)
